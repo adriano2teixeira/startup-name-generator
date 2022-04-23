@@ -10,7 +10,7 @@ class NamesGeneration {
     const availableOnes = [];
     for (let domain of domains) {
       const { data } = await axios.get(
-        `https://domain-availability.whoisxmlapi.com/api/v1?apiKey=at_1X9DXLQvisKWyxfyaOMYLWSfSpZ99&domainName=${domain}.com&credits=DA`
+        `https://domain-availability.whoisxmlapi.com/api/v1?apiKey=${api_key}&domainName=${domain}.com&credits=DA`
       )
 
       if (data.DomainInfo.domainAvailability) {
@@ -22,7 +22,7 @@ class NamesGeneration {
   }
 
 
-  async __init__(term_category) {
+  async __init__() {
     try {
       const { data: domains } = await axios.get(
         "http://names.drycodes.com/8"
