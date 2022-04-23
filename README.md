@@ -1,6 +1,9 @@
 # startup-name-generator
+
 This is a simple rest api that exposes an endpoint "/generate" that generates random cool names for your startup and only 
 shows to you names that are available for a .com domain name registrations.
+
+![](thumb.png)
 
 **How it is built:**
 - NodeJS (Express)
