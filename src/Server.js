@@ -5,7 +5,7 @@ class Server {
   constructor(app) {
     this.Server = http.createServer(app);
   }
-  launch(port = 8888) {
+  launch(port = process.env.PORT || 8888) {
     this.Server.listen(port, () =>
       console.log(`App Running at http://localhost:${port}`)
     );

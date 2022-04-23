@@ -4,6 +4,6 @@ import Routes from "./Routes";
 const App = express();
 
 // Middlewares
-App.use("/api", Routes);
+App.use(Routes);
 
 export default App;
